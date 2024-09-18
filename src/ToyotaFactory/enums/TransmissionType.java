@@ -1,2 +1,7 @@
-package ToyotaFactory.enums;public class TransmissionType {
+package ToyotaFactory.enums;
+
+public enum TransmissionType {
+    AUTOMATIC,
+    MANUAL,
+    ROBOTIC
 }

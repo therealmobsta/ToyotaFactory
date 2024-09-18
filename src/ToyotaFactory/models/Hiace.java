@@ -3,16 +3,22 @@ import ToyotaFactory.components.models.*;
 import ToyotaFactory.enums.TransmissionType;
 
 import java.math.BigDecimal;
+import java.util.List;
 
-public class Hiance extends Car {
+
+public class Hiace extends Car {
     private int cargoCapacity;
-    private Wheel spareWheel;
 
-    public Hiance(String color, int maxSpeed, TransmissionType transmissionType,
-                  BigDecimal price, Wheel[] wheels, FuelTank fuelTank, Engine engine,
-                  Electric electric, Headlights headlights, int cargoCapacity, String country) {
-        super(color, maxSpeed, transmissionType, price, wheels, fuelTank, engine, electric, headlights, country);
+    public Hiace(String color, int maxSpeed, TransmissionType transmissionType,
+                 List<Wheel> wheels, FuelTank fuelTank, Engine engine,
+                 Electrics electrics, Headlights headlights, BigDecimal price,
+                 int cargoCapacity) {
+        super(color, maxSpeed, transmissionType,
+                wheels, fuelTank, engine, electrics, headlights, price);
         this.cargoCapacity = cargoCapacity;
-        this.spareWheel = new Wheel(20);
+    }
+
+    public void useSpareWheel() {
+        System.out.println("Используется запасное колесо.");
     }
 }

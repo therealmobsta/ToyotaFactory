@@ -3,18 +3,18 @@ package ToyotaFactory.components.models;
 /**
  * Электроника
  */
-public class Electric {
-    private boolean isWorking;
+public class Electrics {
+    private boolean working;
 
-    public Electric() {
-        this.isWorking = true;
+    public Electrics() {
+        this.working = true;
     }
 
     public boolean isWorking() {
-        return isWorking;
+        return working;
     }
 
     public void setWorking(boolean working) {
-        isWorking = working;
+        this.working = working;
     }
 }
